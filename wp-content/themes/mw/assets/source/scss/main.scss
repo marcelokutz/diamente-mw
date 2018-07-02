@@ -1,0 +1,431 @@
+@import 'bootstrap/bootstrap-reboot.scss';
+@import 'bootstrap/bootstrap-grid.scss';
+@import 'bootstrap/bootstrap.scss';
+@import 'variables';
+@import 'fonts';
+  
+body {
+    background-color: $white;
+    line-height: 1.5em;
+    font-weight: 300;
+    color: $normal-gray;
+    font-size: 14px;
+    @media (min-width: 1480px) {    
+        font-size: 18px;
+        line-height: 28px;        
+    }
+    b,
+    strong {
+        font-weight: 700;
+    }
+}
+h1, h2, h3 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+p {
+    margin-bottom: 25px;
+}
+.z1 {
+    position: relative;
+    z-index: 1;
+}
+.z2 {
+    position: relative;
+    z-index: 2;
+}
+.btn {
+    border: 1px solid;
+    padding: 1.5rem 2rem;
+    border-radius: inherit;
+    transition: all 0.4s;
+    font-size: 14px;
+    font-weight: 700;    
+    @media (min-width: 1480px) {    
+        font-size: 16px;
+    }
+    &.btn-default {
+        border-color: $theme-color;
+        color: $theme-color;
+        &:hover {
+            background-color: $theme-color;
+            color: $white;
+        }
+    }
+    &.btn-white {
+        border-color: $white;
+        color: $white;
+        &:hover {
+            background-color: $white;
+            color: $theme-color;
+        }
+    }
+}
+.box-2-col {
+    column-count: 2;
+}
+.bg-gray {
+    background-color: $medium-gray;
+    .highlighted-header .subtitle {
+        color: $medium-gray-2;
+    }
+}
+.bg-light-gray {
+    background-color: $light-gray;
+}
+#page {
+    overflow: hidden;
+}
+
+.page-header {
+    height: 100vh;
+    .header-title {
+        font-size: 85px;
+        line-height: 90px;
+        font-weight: bold;
+        color: $white;
+    }
+    .header-subtitle {
+        font-size: 32px;
+        line-height: 35px;
+        color: $white;
+        font-weight: normal;        
+    }
+}
+.highlighted-header {
+    position: relative;
+    margin-bottom: 2rem;
+    .title {
+        font-size: 24px;
+        line-height: 1em;
+        color: $theme-color;
+        position: absolute;
+        top: 55%;
+        left: 0;
+        transform: translate(0,-50%);
+        z-index: 2;
+        margin: 0;
+        padding: 0;
+        @media (min-width: 1480px) {
+            font-size: 34px;            
+        }        
+    }
+    .subtitle {
+        font-size: 116px;
+        line-height: 1em;
+        margin: 0;
+        padding: 0;
+        left: -15%;
+        color: $light-color;
+        position: relative;
+        z-index: 1;
+        @media (min-width: 1480px) {
+            left: -16%;            
+            font-size: 176px;
+            font-size: 8vw;
+        }
+    }
+    &.highlighted-center {
+        .title {
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .subtitle {
+            left: auto;
+            text-align: center;
+        }        
+    }
+}
+
+.header {
+    nav {
+        li {
+            a {
+                font-size: 14px;
+                color: $normal-gray;
+            }
+        }
+    }
+}
+#site-header-inner {
+    padding-top: 10px;
+    background-color: #f8f8f8;
+    position: relative;
+    &:before {
+        content: "";
+        width: 100%;
+        height: 120px;
+        display: block;
+        background-color: $white;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+    #site-logo {
+        position: relative;
+        z-index: 2;
+    }
+}
+body.wpex-has-vertical-header {
+    #site-header.header-six {
+        box-shadow: inherit;
+    }
+    .header-six #site-logo {
+        padding-bottom: 15px;
+    }
+}
+#top-bar-wrap {
+    height: 120px;
+    #top-bar {
+        padding: 0;
+        max-width: 100%;
+    }
+    .top-bar-left {
+        float: right;
+    }
+    .btn-contattaci {
+        background-color: $theme-color;
+        color: $white;
+        display: block;
+        height: 120px;
+        line-height: 120px;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        font-size: 14px;
+        transition: all 0.4s;
+        &:hover {
+            text-decoration: none;
+            background-color: $normal-gray;
+        }
+    }
+    ul {
+        margin: 0;
+    }
+}
+#site-header {
+    .dropdown-menu {
+        display: block;
+        top: 120px;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin: 0;
+        border: none;
+        border-top:1px solid $medium-gray;        
+        a {
+            font-size: 14px;
+            color: $normal-gray;
+            text-transform: uppercase;
+            background-color: $light-color;
+            padding-top: 2.2rem;
+            padding-bottom: 2.2rem;
+            &:hover {
+                background-color: #efefef;                
+            }
+        }
+        li {
+            border-color: $medium-gray;
+        }
+        .current-menu-item a {
+            background-color: #efefef;
+            border-left: 12px solid $theme-color;
+        }
+    }
+}
+
+.slider-info {
+    .item {
+        padding: 70px 40px;
+        background-color: $medium-gray;
+        color: $normal-gray;
+        border-right: 5px solid $white;
+        h3 {
+            color: $normal-gray;
+            margin-bottom: 25px;
+        }
+        .icon {
+            margin-bottom: 45px;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            .icon-arrow {
+                height: 100%;
+                &:after {
+                    display: block;
+                    content: "";
+                    width: 100%;
+                    height: 64px;
+                    background: url("../images/metalworking-home-line.svg") no-repeat 50% 50%;
+                }
+            }
+        }
+    }
+}
+
+.prodotti_lista-item {
+    position: relative;
+    background-color: #666;
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.4;
+    }
+    .img {
+        padding: 0;
+        margin: 0;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    h3 {
+        display: block;
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        top: 3%;
+        left: -40%;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.56;
+        color: $white;
+        text-align: right;
+        transform: rotate(-90deg) translate(-50%,0%);
+        @media (min-width: 1480px) {
+            font-size: 18px;
+        }
+    }
+}
+.form-news {
+    position: relative;
+    z-index: 2;
+}
+.wpcf7 {
+    label {
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+    label {
+        max-width: 100%;
+        width: 100%;        
+    }
+    .wpcf7-text {
+        background-color: $white;
+        height: 55px;
+        border: solid 1px #646569;
+    }
+    .wpcf7-select {
+        background-color: $white;        
+        height: 55px;
+        border: solid 1px #646569;
+        width: 100%;
+        font-weight: 700;        
+    }
+    .wpcf7-acceptance label {
+        font-weight: 300;
+        font-size: 14px;
+    }
+    .btn {
+        background-color: $white;
+        border-radius: inherit;
+        border: 1px solid;
+    }
+}
+
+.call-to-contatto {
+    height: 435px;
+    background: url("../images/metalworking-home-cta-bg-2.jpg") no-repeat 50% 50%;
+    margin-bottom: 5px;
+    h2 {
+        color: $white;
+        font-weight: 300;
+        font-size: 30px;
+        margin-bottom: 3rem;
+    }
+}
+
+.box-qualita {
+    margin-bottom: 0;
+    .bg-gray {
+        padding-bottom: 30vh;
+    }
+    .image {
+        margin-top: -25vh;
+    }
+}
+
+.list-serv {
+    background: url("../images/metalworking-azienda-competenze-bg.jpg") no-repeat 50% 0%;
+    .highlighted-header .subtitle {
+        color: $light-color;
+    }
+    .item-2 {
+        padding-top: 15vw;
+    }
+}
+
+.list-tecnology {
+    .item {
+        border-bottom: 1px solid $white;
+        h3 {
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 10px;
+            @media (min-width: 1480px) {
+                font-size: 16px;
+            }
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.site-footer {
+    .logo-footer {
+        width: 211px;
+        height: 115px;
+    }
+    .col-1 {
+        width: 37%;
+        flex: 0 0 37%;
+        max-width: 37%;
+    }
+    .col-2 {
+        width: 37%;
+        flex: 0 0 37%;
+        max-width: 37%;
+    }
+    .col-3 {
+        width: 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .widget-title {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    p {
+        color: #efefef;
+        line-height: 1.5em;
+        opacity: 0.7;
+        @media (min-width: 1480px) {
+            font-size: 15px;            
+        }        
+    }
+    a {
+        color: #efefef;
+        &:hover {
+            text-decoration: underline;
+        }        
+    }
+}
+
+@import 'slick';
+@import 'slick-theme';
