@@ -4,7 +4,11 @@
     <header class="page-header text-center d-flex align-items-center">    
 <?php } ?>
     <div class="col-12">
-        <h1 class="header-title"><?php echo get_field('header-title'); ?></h1>
+        <?php if( get_field('header-subtitle') ) { ?>
+            <h1 class="header-title"><?php echo get_field('header-title'); ?></h1>
+        <?php } else { ?>
+            <h1 class="header-title"><?php the_title(); ?></h1>
+        <?php } ?>
         <?php if( get_field('header-subtitle') ) { ?>
             <h2 class="header-subtitle"><?php echo get_field('header-subtitle'); ?></h2>
         <?php } ?>

@@ -37,6 +37,6 @@
             <?php if( get_sub_field('url_del_prodotto') ) {
                 echo '</a>';
             } ?>
-            <?php $i++; } ?>
+        <?php $i++; } ?>
     </div>
 <?php } } ?>
