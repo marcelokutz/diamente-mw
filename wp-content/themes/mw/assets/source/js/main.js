@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     var docW = $(document).width();
 
-    $('.slider-info').length && $('.slider-info').slick({
+    $('.home .slider-info').length && $('.home .slider-info').slick({
         centerMode: false,
         arrows: false,
         dots: false,
@@ -32,6 +32,59 @@ $(document).ready(function(){
             }
         ]
     });
+
+    
+    $('.page-template-template-qualita .slider-info').length && $('.page-template-template-qualita .slider-info').slick({
+        centerMode: false,
+        arrows: false,
+        dots: false,
+        infinite: false,
+        slidesToShow: 3,
+        variableWidth: true,
+        responsive: [
+            {
+            breakpoint: 1200,
+            settings: {
+                centerPadding: '40px',
+                slidesToShow: 3
+            }
+            },{
+            breakpoint: 980,
+            settings: {
+                centerPadding: '40px',
+                slidesToShow: 3
+            }
+            },
+            {
+            breakpoint: 480,
+            settings: {
+                centerPadding: '40px',
+                slidesToShow: 3
+            }
+            }
+        ]
+    });
+
+    $('.linee-slider').length && $('.linee-slider').slick({
+        centerMode: false,
+        arrows: true,
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+    });
+
+    $('.gallery').length && $('.gallery').slick({
+        centerMode: true,
+        arrows: true,
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+        centerPadding: '140px',     
+        variableWidth: true,           
+    });
+
+
+    
 
 
 /*
@@ -71,4 +124,7 @@ $(document).ready(function(){
         }, 1000);
     }); */
 
-})
+    
+
+});
+

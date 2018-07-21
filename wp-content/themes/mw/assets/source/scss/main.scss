@@ -94,6 +94,9 @@ p {
         font-weight: normal;
     }
 }
+body.wpex-has-vertical-header #site-navigation .sf-menu ul {
+    left: 0!important;
+}
 .highlighted-header {
     position: relative;
     margin-bottom: 2rem;
@@ -282,7 +285,6 @@ body.wpex-has-vertical-header {
         }
     }
     ul.sub-menu {
-        display: none!important;
         position: inherit;
         left: 0;
         li {
@@ -323,7 +325,10 @@ body.wpex-has-vertical-header {
         }
     }
 }
-
+body.has-sidebar .content-area {
+    max-width: 100%!important;
+    width: 100%!important;
+}
 .slider-info {
     .item {
         padding: 70px 40px;
@@ -407,6 +412,7 @@ body.wpex-has-vertical-header {
     label {
         font-weight: 700;
         margin-bottom: 25px;
+        text-transform: uppercase;
     }
     label {
         max-width: 100%;
@@ -427,11 +433,13 @@ body.wpex-has-vertical-header {
     .wpcf7-acceptance label {
         font-weight: 300;
         font-size: 14px;
+        text-transform: none;
     }
     .btn {
         background-color: $white;
         border-radius: inherit;
         border: 1px solid;
+        font-size: 1.6rem;
     }
 }
 
@@ -444,6 +452,9 @@ body.wpex-has-vertical-header {
         font-weight: 300;
         font-size: 30px;
         margin-bottom: 3rem;
+    }
+    .page-template-template-filters & {
+        background: url("../images/metalworking-filters-cta.jpg") no-repeat 50% 50%;        
     }
 }
 
@@ -529,7 +540,272 @@ body.wpex-has-vertical-header {
     background-color: $theme-color;
     color: $white;
 }
+.page-template-template-filters  {
+    .highlighted-block {
+        position: relative;
+    }
+    .title-linee {
+        position: absolute;
+        left: 0;
+        top: 22%;
+    }
+}
+.linee-slider {
+    .title-prod {
+        padding-top: 31%;
+        padding-left: 12%;
+    }
+    .img {
+        position: relative;
+        padding: 3em 10vw;
+        img {
+            position: relative;
+            max-width: 100%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 3;
+        }
+        
+    }
+    h3 {
+        font-size: 1.55rem;
+    }
+    .slick-active {
+        .img {
+            &:after {
+                position: absolute;
+                display: block;
+                content: "";
+                width: 100vw;
+                height: 50%;
+                top: 25%;
+                left: 0;
+                background-color: $medium-gray;
+            }
+        }
+    }
+    .slick-arrow {
+        top: 65%;
+        left: 20%;
+        display: block;
+        width: 77px;
+        height: 22px;
+        background: url('../images/arrow-nav.png') no-repeat 0 50%;
+        &:before {
+            display: none;
+        }
+    }
+    .slick-prev {
+        left: 11%;
+        &:hover, &:focus, &:active {
+            background: url('../images/arrow-nav.png') no-repeat 0 50%;            
+        }
+    }
+    .slick-next {
+        left: 21%;
+        background-position: -98px 50%;
+        &:hover, &:focus, &:active {
+            background: url('../images/arrow-nav.png') no-repeat -98px 50%;
+        }
+    }
+}
+.gallery {
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 80vh;
+        max-width: 50vw;        
+    }
+    .item-gallery {
+        pointer-events: none;
+        .image {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    .slick-arrow {
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 77px;
+        height: 22px;
+        background: url('../images/arrow-nav.png') no-repeat 0 50%;
+        &:before {
+            display: none;
+        }
+    }
+    .slick-prev {
+        left: 123px;
+        z-index: 2;
+        &:hover, &:focus, &:active {
+            background: url('../images/arrow-nav.png') no-repeat 0 50%;            
+        }
+    }
+    .slick-next {
+        right: 123px;
+        z-index: 2;
+        left: auto;
+        background-position: -98px 50%;
+        &:hover, &:focus, &:active {
+            background: url('../images/arrow-nav.png') no-repeat -98px 50%;
+        }
+    }
+}
+.archive {
+    .page-header {
+        background: url('../images/metalworking-news-header.jpg') no-repeat 50% 50%;
+    }
+}
+.post-pagination-wrap,
+.news-nav {
+    padding: 0;
+    font: 0/0 'a';
+    color: transparent;
+    background-color: $light-color;
+    a {
+        display: inline-block;
+        position: relative;
+        width: 50%;
+        padding: 4rem 15px 4rem 65px;
+        font-size: 1.4rem;
+        line-height: 1em;
+        font-family: 'Montserrat';
+        color: $normal-gray;     
+        &:before {
+            content: "";
+            width: 55px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: $theme-color;
+            background-image: url('../images/nav-prev.gif');
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+        }
+        &:nth-child(2) {
+            padding: 4rem 65px 4rem 15px;
+            text-align: right;          
+            &:before {            
+                left: auto;
+                right: 0;
+                background-image: url('../images/nav-next.gif');
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+            }
+        }
+        &:hover {
+            background-color: #ededed;
+            text-decoration: none;
+        }
+    }
+}
+body.wpex-responsive .post-pagination-wrap {
+    margin-bottom: 3px;
+    .post-pagination {
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+    }
+    a {
+        width: 100%;
+        .fa {
+            display: none;
+        }
+    }
+    .post-next a {
+        padding: 4rem 65px 4rem 15px;
+        text-align: right;          
+        &:before {            
+            left: auto;
+            right: 0;
+            background-image: url('../images/nav-next.gif');
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+        }
+    }
+}
+.itens-news {
+    h2 {
+        color: #9a241d;
+        font-weight: 300;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    .img {
+        margin-bottom: 25px;
+    }
+    .description {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 45px;
+        margin-bottom: 20px;
+    }
+    .date {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+.page-template-template-progettazione {
+    .secondary-content {
+        .image-right {
+            padding-left: 0;
+        }
+    }
+}
+.single-post  {
+    .page-header {
+        h1 {
+            font-size: 71px;
+        }
+        p.date {
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+    .page-header {
+        height: auto;
+        min-height: 24vw;
+        background-position: 50% 50%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-color: #000;        
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-color: #000;
+            opacity: 0.7;
+        }
+    }
+    .post-content {
+        h2 {
+            font-weight: 300;
+            color: $theme-color;
+            margin-bottom: 20px;
+            padding-top: 15px;
+        }
+    }
+}
+.page-template-template-qualita .slider-info {
+    .slick-slide {
+        max-width: 27vw;
+    }
+    .item {
+        min-height: 450px;
+    }
+}
 
+#map {
+    height: 100vh;
+    width: 100%;
+   }
 
 @import 'slick';
 @import 'slick-theme';

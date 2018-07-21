@@ -21,7 +21,7 @@
     </div>
 
     <?php $i = 1; if( get_field('foto_e_testo') ) { if( get_field('foto_e_testo') ) { ?>
-        <div class="bg-light-gray list-tecnology d-flex row justify-content-center">
+        <div class="bg-light-gray list-tecnology d-flex row justify-content-center mb-5">
             <?php while( has_sub_field('foto_e_testo') ){ ?>
                 <div class="col-12 col-lg-6 pt-0 pb-0 item">
                     <div class="d-flex align-items-center justify-content-center">
@@ -41,6 +41,9 @@
             <?php $i++; } ?>
         </div>
     <?php } } ?>
+
+    <?php get_template_part( 'partials/secondary', 'content' ); ?>
+    
 
 <?php endwhile; ?>
 

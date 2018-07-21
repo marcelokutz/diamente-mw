@@ -27,7 +27,7 @@ function total_child_enqueue_parent_theme_style() {
 
 	// Load the stylesheet
 	wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css', array(), $version );
-	wp_enqueue_style( 'style-theme', '/wp-content/themes/'.$theme.'/assets/dist/css/main.min.css', array(), $version );
+	wp_enqueue_style( 'style-theme', '/wp-content/themes/mw/assets/dist/css/main.min.css', array(), $version );
 	
 }
 add_action( 'wp_enqueue_scripts', 'total_child_enqueue_parent_theme_style' );
@@ -37,3 +37,4 @@ function cc_mime_types($mimes) {
 	return $mimes;
 }
 add_filter('upload_mimes', 'cc_mime_types');
+
