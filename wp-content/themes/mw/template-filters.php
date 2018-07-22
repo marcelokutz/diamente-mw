@@ -42,7 +42,7 @@
     <?php get_template_part( 'partials/secondary', 'content' ); ?>
 
     <?php $i = 1; if( get_field('prodotti') ) { if( get_field('prodotti') ) {?>
-        <div class="highlighted-block d-flex align-items-center justify-content-center pt-5 bg-light-gray">
+        <div class="highlighted-block d-flex row ml-0 mr-0 align-items-center justify-content-center pt-5 bg-light-gray">
             <div class="col-12 col-lg-5 title-linee">
                 <div class="content-header">
                     <div class="highlighted-header highlighted-center">

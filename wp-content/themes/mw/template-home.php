@@ -11,7 +11,7 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
     <?php get_template_part( 'partials/page', 'header' ); ?>
-    <div class="d-flex align-items-center mb-5">
+    <div class="d-flex row align-items-center mb-5">
         <div class="col-12 col-lg-6 pt-5">
             <?php get_template_part( 'partials/highlighted', 'block' ); ?>
         </div>
@@ -23,8 +23,8 @@
     <?php get_template_part( 'partials/list', 'product' ); ?>
 
 
-    <div class="newsletter d-flex align-items-center mb-5 pt-5 pb-5">
-        <div class="col-12 col-lg-6 pt-2">
+    <div class="newsletter d-flex row align-items-center mb-5 pt-5 pb-5">
+        <div class="col-12 col-lg-6 pt-2 pl-3 pr-5">
             <div class="highlighted-block d-flex align-items-center justify-content-center">                
                 <div class="col-12 col-lg-10 col-xl-9">            
                     <div class="content-header">
@@ -40,7 +40,7 @@
             </div>
         </div>
 
-        <div class="col-12 col-lg-6 pt-5 form-news">
+        <div class="col-12 col-lg-6 pt-5 pr-5 pl-5 form-news">
             <?php echo do_shortcode( '[contact-form-7 id="48" title="Newsletter"]' ); ?>
         </div>
     </div>

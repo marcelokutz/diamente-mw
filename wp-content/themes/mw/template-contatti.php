@@ -13,7 +13,7 @@
     <div class="map">
         <div id="map"></div>
     </div>
-    <div class="d-flex align-items-center mb-5 pt-5 pb-5">
+    <div class="d-flex row ml-0 mr-0 align-items-center mb-5 pt-5 pb-5">
         <div class="col-12 col-lg-6 pt-5">
             <?php get_template_part( 'partials/highlighted', 'block' ); ?>
         </div>

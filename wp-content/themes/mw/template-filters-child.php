@@ -16,16 +16,16 @@
         <div class="mb-5 pt-5">
 
             <?php if( get_field('immagine_destra') ) { ?>
-                <div class="d-flex align-items-center mb-5">
+                <div class="d-flex row ml-0 mr-0 align-items-center mb-5">
                     <div class="col-12 col-lg-6">
                         <?php get_template_part( 'partials/highlighted', 'block' ); ?>
                     </div>
-                    <div class="col-12 col-lg-6 pr-0">
+                    <div class="col-12 col-lg-6 pr-lg-0">
                         <?php get_template_part( 'partials/image', 'right' ); ?>
                     </div>        
                 </div>
             <?php } else { ?>                
-                <div class="highlighted-block d-flex align-items-center justify-content-center pt-5">
+                <div class="highlighted-block d-flex row ml-0 mr-0 align-items-center justify-content-center pt-5">
                     <div class="col-12 col-lg-8 col-xl-5">
                         <div class="content-header">
                             <div class="highlighted-header">
@@ -38,7 +38,7 @@
                     </div>
                 </div>
 
-                <div class="highlighted-block d-flex align-items-center justify-content-center">
+                <div class="highlighted-block d-flex row ml-0 mr-0 align-items-center justify-content-center">
                     <div class="col-12 col-lg-8 col-xl-5">
                         <div class="box-1-col">
                             <?php if( get_field('content_highlighted') ) { ?>

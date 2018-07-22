@@ -14,9 +14,9 @@
 
     <?php $i = 1; if( get_field('prodotto_dettaglio') ) { if( get_field('prodotto_dettaglio') ) { ?>
         <?php while( has_sub_field('prodotto_dettaglio') ){ ?>
-            <div class="d-flex align-items-center pt-5 mb-5 pb-5">
+            <div class="d-flex row ml-0 mr-0 align-items-center pt-5 mb-5 pb-5">
                 <div class="col-12 col-lg-6 pt-5 <?php if($i == 1) { echo 'order-1'; } else { echo 'order-2'; } ?>">
-                    <div class="highlighted-block d-flex align-items-center <?php if($i == 1) { echo 'justify-content-center'; } else { echo 'justify-content-left'; } ?>">
+                    <div class="highlighted-block d-flex row ml-0 mr-0 align-items-center <?php if($i == 1) { echo 'justify-content-center'; } else { echo 'justify-content-left'; } ?>">
                         <div class="col-12 col-lg-10 col-xl-9">
                             <div class="highlighted-header">
                                 <?php if( get_sub_field('titolo') ) { ?>
@@ -36,7 +36,7 @@
                     <div class="highlighted-block d-flex align-items-center justify-content-left">
                         <div class="col-12 col-lg-10">
                             <?php if( get_sub_field('immagine') ) {
-                                echo '<figure class="image"><img src="';
+                                echo '<figure class="image image-right"><img src="';
                                 echo get_sub_field('immagine');
                                 echo '" alt="" />';
                                 echo '</figure>';

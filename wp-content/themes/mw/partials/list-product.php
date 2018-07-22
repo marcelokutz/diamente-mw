@@ -7,7 +7,7 @@
             <?php } ?>
         </div>
     </div>
-    <div class="d-flex align-items-stretch">
+    <div class="d-flex row align-items-stretch">
         <?php while( has_sub_field('prodotti_lista') ){ ?>
             <?php if( get_sub_field('url_del_prodotto') ) {
                 echo '<a href="';

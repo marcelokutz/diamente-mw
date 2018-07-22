@@ -9,6 +9,7 @@ $(document).ready(function(){
         infinite: false,
         slidesToShow: 1,
         variableWidth: true,
+        equalizeHeight: true,        
         responsive: [
             {
             breakpoint: 1200,
@@ -39,8 +40,9 @@ $(document).ready(function(){
         arrows: false,
         dots: false,
         infinite: false,
-        slidesToShow: 3,
+        slidesToShow: 1,
         variableWidth: true,
+        equalizeHeight: true,
         responsive: [
             {
             breakpoint: 1200,
@@ -59,7 +61,7 @@ $(document).ready(function(){
             breakpoint: 480,
             settings: {
                 centerPadding: '40px',
-                slidesToShow: 3
+                slidesToShow: 1
             }
             }
         ]
