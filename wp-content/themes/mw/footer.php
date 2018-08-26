@@ -31,8 +31,40 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php wp_footer(); ?>
 <script type="text/javascript" src="/wp-content/themes/mw/assets/dist/js/jquery.min.js"></script>
 <script type="text/javascript" src="/wp-content/themes/mw/assets/dist/js/slick.min.js"></script>
+<script type="text/javascript" src="/wp-content/themes/mw/assets/dist/js/jscookie.min.js"></script>
 <script type="text/javascript" src="/wp-content/themes/mw/assets/dist/js/main.min.js"></script>
 
 
+<script>
+	jQuery(document).ready(function($){
+	  jQuery(".pulse_marker").on('click',function(){
+	    // jQuery(".bonta-info").toggleClass("active");
+	    jQuery(this).find(".pulse_rays").toggleClass("off");
+	    jQuery(this).find(".x").toggleClass("active");
+	    jQuery(this).find(".x").toggleClass("active");
+	    jQuery(this).parent().parent().find(".box_info").toggleClass("active-1");
+	  });
+	});
+</script>
+<script>
+  document.addEventListener( 'wpcf7mailsent', function( event ) {
+      if ( '308' == event.detail.contactFormId ) {
+		Cookies.set('enable-download', true, { expires: 1 });
+		$('.item-download').removeClass('disabled');
+		$('.item-download a').removeClass('disabled');
+		$('html,body').animate({
+			scrollTop: $('#list-downloads').offset().top
+		}, 500);
+      }
+      
+  }, false );
+
+  	if(Cookies.get('enable-download')){
+        setTimeout(function() {
+            $('.item-download').removeClass('disabled');
+            $('.item-download a').removeClass('disabled');
+        }, 1);
+    }
+</script>
 </body>
 </html>

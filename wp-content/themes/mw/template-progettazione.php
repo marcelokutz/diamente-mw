@@ -26,13 +26,13 @@
                 <div class="col-12 col-xl-6 pt-0 pb-0 item">
                     <div class="d-flex row ml-0 mr-0 align-items-center justify-content-center">
                         <?php if( get_sub_field('immagine') ) {
-                            echo '<figure class="image col-12 col-lg-5 p-0 mb-lg-0"><img src="';
+                            echo '<figure class="image col-12 col-md-6 col-lg-5 p-0 mb-lg-0"><img src="';
                             echo get_sub_field('immagine');
                             echo '" alt="" />';
                             echo '</figure>';
                         } ?>
                         <?php if( get_sub_field('testo') ) { ?>
-                            <div class="col-12 col-lg-7 p-5">
+                            <div class="col-12 col-md-6 col-lg-7 p-5">
                                 <?php echo get_sub_field('testo'); ?>
                             </div>
                         <?php } ?>

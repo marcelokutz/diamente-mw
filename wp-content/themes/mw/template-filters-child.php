@@ -86,10 +86,10 @@
     <?php get_template_part( 'partials/list', 'product' ); ?>
 
 
-    <div class="call-to-contatto bg-fixed d-flex justify-content-center align-items-center">
+    <div class="call-to-contatto d-flex justify-content-center align-items-center">
         <div class="col-12 col-lg-10">
             <h2>Sei interessato a una delle nostre strutture?</h2>
-            <a href="/contattaci" class="btn btn-white" title="CONTATTACI">CONTATTACI</a>
+            <a href="/contatti/" class="btn btn-white" title="CONTATTACI">CONTATTACI</a>
         </div>
     </div>
 <?php endwhile; ?>

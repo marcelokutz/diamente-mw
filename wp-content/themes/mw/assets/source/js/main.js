@@ -27,6 +27,7 @@ $(document).ready(function(){
             {
             breakpoint: 480,
             settings: {
+                variableWidth: false,
                 centerPadding: '40px',
                 slidesToShow: 1
             }
@@ -86,7 +87,13 @@ $(document).ready(function(){
     });
 
 
-    
+    $("#menu-menu-topbar li.wpml-ls-menu-item > a").on('click', function(e) {
+        var ulis = $(this).closest('ul').attr('class');
+        if(ulis == "top-bar-menu") {
+            e.preventDefault();
+            $('#menu-menu-topbar .sub-menu').toggleClass('show');
+        }
+    });
 
 
 /*

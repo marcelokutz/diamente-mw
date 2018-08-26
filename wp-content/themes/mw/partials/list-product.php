@@ -9,18 +9,13 @@
     </div>
     <div class="d-flex row align-items-stretch">
         <?php while( has_sub_field('prodotti_lista') ){ ?>
-            <?php if( get_sub_field('url_del_prodotto') ) {
-                echo '<a href="';
-                echo get_sub_field('url_del_prodotto');
-                echo '">';
-            } ?>
-            <div class="col-12 col-lg-4 p-0 prodotti_lista-item">
-                <?php
-                if( get_sub_field('url_del_prodotto') ) {
+            <div class="col-12 col-md-4 p-0 prodotti_lista-item">
+                <?php if( get_sub_field('url_del_prodotto') ) {
                     echo '<a href="';
                     echo get_sub_field('url_del_prodotto');
                     echo '">';
-                }
+                } ?>
+                <?php
                 if( get_sub_field('nome_del_prodotto') ) {
                     echo '<h3>';
                     echo get_sub_field('nome_del_prodotto');
@@ -33,10 +28,10 @@
                     echo '</figure>';
                 }
                 ?>
+                <?php if( get_sub_field('url_del_prodotto') ) {
+                    echo '</a>';
+                } ?>
             </div>
-            <?php if( get_sub_field('url_del_prodotto') ) {
-                echo '</a>';
-            } ?>
         <?php $i++; } ?>
     </div>
 <?php } } ?>

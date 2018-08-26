@@ -45,7 +45,7 @@
     <div class="call-to-contatto bg-fixed d-flex justify-content-center align-items-center">
         <div class="col-12 col-lg-10">
             <h2>Sei interessato a uno dei nostri prodotti?</h2>
-            <a href="/contattaci" class="btn btn-white" title="CONTATTACI">CONTATTACI</a>
+            <a href="/contatti/" class="btn btn-white" title="CONTATTACI">CONTATTACI</a>
         </div>
     </div>
 <?php endwhile; ?>
