@@ -883,7 +883,6 @@ body.has-sidebar .content-area {
         }
     }
     .item-gallery {
-        pointer-events: none;
         .image {
             padding-left: 15px;
             padding-right: 15px;
@@ -1282,3 +1281,4 @@ body.wpex-responsive .post-pagination-wrap {
 
 @import 'slick';
 @import 'slick-theme';
+@import 'slick-lightbox';

@@ -79,9 +79,12 @@
                 <?php while( has_sub_field('gallery') ){ ?>
                     <div class="item-gallery">
                         <?php if( get_sub_field('immagine') ) {
-                            echo '<figure class="image"><img src="';
+                            echo '<figure class="image">';
+                            echo '<a href="';
                             echo get_sub_field('immagine');
-                            echo '" alt="" />';
+                            echo '"><img src="';
+                            echo get_sub_field('immagine');
+                            echo '" alt="" /></a>';
                             echo '</figure>';
                         } ?>
                     </div>

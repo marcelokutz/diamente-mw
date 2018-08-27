@@ -85,6 +85,9 @@ $(document).ready(function(){
         centerPadding: '140px',     
         variableWidth: true,           
     });
+    $('.gallery').slickLightbox({
+        itemSelector: 'a'
+    });
 
 
     $("#menu-menu-topbar li.wpml-ls-menu-item > a").on('click', function(e) {

@@ -18,7 +18,13 @@
             <?php get_template_part( 'partials/highlighted', 'block' ); ?>
         </div>
         <div class="col-12 col-lg-6">
-            <?php echo do_shortcode( '[contact-form-7 id="281" title="Contatti"]' ); ?>
+            <?php if ( ICL_LANGUAGE_CODE == 'en' ) {
+                echo do_shortcode( '[contact-form-7 id="704" title="Contatti_en"]' );
+            } else if ( ICL_LANGUAGE_CODE == 'de' ) {
+                echo do_shortcode( '[contact-form-7 id="705" title="Contatti_de"]' );
+            } else {
+                echo do_shortcode( '[contact-form-7 id="281" title="Contatti"]' );
+            } ?>     
         </div>        
     </div>
 <?php endwhile; ?>

@@ -31,6 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php wp_footer(); ?>
 <script type="text/javascript" src="/wp-content/themes/mw/assets/dist/js/jquery.min.js"></script>
 <script type="text/javascript" src="/wp-content/themes/mw/assets/dist/js/slick.min.js"></script>
+<script type="text/javascript" src="/wp-content/themes/mw/assets/dist/js/slick-lightbox.min.js"></script>
 <script type="text/javascript" src="/wp-content/themes/mw/assets/dist/js/jscookie.min.js"></script>
 <script type="text/javascript" src="/wp-content/themes/mw/assets/dist/js/main.min.js"></script>
 
