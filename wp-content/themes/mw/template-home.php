@@ -61,18 +61,20 @@
 
     <div class="call-to-contatto bg-fixed d-flex justify-content-center align-items-center">
         <div class="col-12 col-lg-10">
-            <h2>
-                <?php if ( ICL_LANGUAGE_CODE == 'en' ) {
-                        echo 'Are you interested in one of our products?';
+            <?php if( get_field('call_to_action_text') ) { ?>
+                <h2><?php echo get_field('call_to_action_text'); ?></h2>
+            <?php } else { ?>
+                <h2><?php if ( ICL_LANGUAGE_CODE == 'en' ) {
+                    echo 'Are you interested in one of our products?';
                     } else if ( ICL_LANGUAGE_CODE == 'de' ) {
                         echo 'Sind Sie an einem unserer Produkte interessiert?';
                     } else if ( ICL_LANGUAGE_CODE == 'fr' ) {
                         echo "Êtes-vous intéressé par l'un de nos produits?";
                     } else {
-                      echo 'Sei interessato a uno dei nostri prodotti?';
+                    echo 'Sei interessato a uno dei nostri prodotti?';
                     }
-                ?>
-            </h2>
+                ?></h2>
+            <?php } ?>
             <?php if ( ICL_LANGUAGE_CODE == 'en' ) { ?>
                 <a href="/contatti/" class="btn btn-white" title="CONTACT">CONTACT</a>
             <?php } else if ( ICL_LANGUAGE_CODE == 'de' ) { ?>
