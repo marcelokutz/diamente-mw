@@ -49,6 +49,33 @@ if ( ! defined( 'ABSPATH' ) ) {
 </script>
 <script>
   document.addEventListener( 'wpcf7mailsent', function( event ) {
+      if ( '751' == event.detail.contactFormId ) {
+		Cookies.set('enable-download', true, { expires: 1 });
+		$('.item-download').removeClass('disabled');
+		$('.item-download a').removeClass('disabled');
+		$('html,body').animate({
+			scrollTop: $('#list-downloads').offset().top
+		}, 500);
+      }
+
+      if ( '752' == event.detail.contactFormId ) {
+		Cookies.set('enable-download', true, { expires: 1 });
+		$('.item-download').removeClass('disabled');
+		$('.item-download a').removeClass('disabled');
+		$('html,body').animate({
+			scrollTop: $('#list-downloads').offset().top
+		}, 500);
+      }
+
+      if ( '753' == event.detail.contactFormId ) {
+		Cookies.set('enable-download', true, { expires: 1 });
+		$('.item-download').removeClass('disabled');
+		$('.item-download a').removeClass('disabled');
+		$('html,body').animate({
+			scrollTop: $('#list-downloads').offset().top
+		}, 500);
+      }
+
       if ( '308' == event.detail.contactFormId ) {
 		Cookies.set('enable-download', true, { expires: 1 });
 		$('.item-download').removeClass('disabled');

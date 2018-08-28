@@ -17,7 +17,15 @@
             <?php get_template_part( 'partials/highlighted', 'block' ); ?>
         </div>
         <div class="col-12 col-lg-6 pt-5 mt-5">
-            <?php echo do_shortcode( '[contact-form-7 id="308" title="Download - form"]' ); ?>
+            <?php if ( ICL_LANGUAGE_CODE == 'en' ) {
+                echo do_shortcode( '[contact-form-7 id="751" title="Download - en"]' );
+            } else if ( ICL_LANGUAGE_CODE == 'de' ) {
+                echo do_shortcode( '[contact-form-7 id="752" title="Download - de"]' );
+            } else if ( ICL_LANGUAGE_CODE == 'fr' ) {
+                echo do_shortcode( '[contact-form-7 id="753" title="Download - fr"]' );
+            } else {
+                echo do_shortcode( '[contact-form-7 id="308" title="Download - form"]' );
+            } ?>  
         </div>        
     </div>
 
@@ -25,11 +33,11 @@
         <div class="list-downloads d-flex justify-content-center pt-5 pb-5" id="list-downloads">
             <div class="col-12 col-lg-10 col-xl-10 d-flex justify-content-around row">
                 <?php while( has_sub_field('downloads') ){ ?>
-                    <div class="text-center col-12 col-lg-4 mb-5 item-download disabled item-<?php echo $i; ?>">
+                    <div class="text-center col-12 col-lg-4 mb-5 pb-5 item-download disabled item-<?php echo $i; ?>">
                         <?php if( get_sub_field('file') ) { ?>
                             <div class="icon"><img src="/wp-content/themes/mw/assets/dist/images/metalworking-download-icon.svg" alt=""></div>
-                            <h3 class="color"><?php echo get_sub_field('file')['title']; ?></h3>
-                            <a href="<?php echo get_sub_field('file')['url']; ?>" title="<?php echo get_sub_field('file')['title']; ?>" download class="disabled">SCARICA</a>
+                            <h3 class="color"><?php echo get_sub_field('nome_del_file'); ?></h3>
+                            <a href="<?php echo get_sub_field('file')['url']; ?>" title="<?php echo get_sub_field('nome_del_file'); ?>" download class="disabled">SCARICA</a>
                         <?php } ?>
                     </div>
                 <?php $i++; } ?>

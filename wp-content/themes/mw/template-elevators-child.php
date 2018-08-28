@@ -49,6 +49,37 @@
 
     <?php } } ?>
 
+    <?php $i = 1; if( get_field('gallery') ) { if( get_field('gallery') ) { ?>
+    <div class="section-gallery bg-light-gray">
+        <div class="highlighted-block d-flex align-items-center justify-content-center pt-5 bg-light-gray">        
+            <div class="col-12 title-linee">
+                <div class="content-header">
+                    <div class="highlighted-header highlighted-center">
+                        <h2 class="title">Gallery</h2>
+                        <h3 class="subtitle">gallery</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="gallery d-flex align-items-center pt-5 mb-1 pb-5">        
+                <?php while( has_sub_field('gallery') ){ ?>
+                    <div class="item-gallery">
+                        <?php if( get_sub_field('immagine') ) {
+                            echo '<figure class="image">';
+                            echo '<a href="';
+                            echo get_sub_field('immagine');
+                            echo '"><img src="';
+                            echo get_sub_field('immagine');
+                            echo '" alt="" /></a>';
+                            echo '</figure>';
+                        } ?>
+                    </div>
+                <?php $i++; } ?>
+            </div>
+    </div>
+
+    <?php } } ?>
+
     <?php get_template_part( 'partials/list', 'product' ); ?>
 
 

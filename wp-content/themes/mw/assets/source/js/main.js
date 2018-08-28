@@ -76,7 +76,7 @@ $(document).ready(function(){
         slidesToShow: 1,
     });
 
-    $('.gallery').length && $('.gallery').slick({
+    /*$('.gallery').length && $('.gallery').slick({
         centerMode: true,
         arrows: true,
         dots: false,
@@ -84,6 +84,13 @@ $(document).ready(function(){
         slidesToShow: 1,
         centerPadding: '140px',     
         variableWidth: true,           
+    });*/
+    $('.gallery').length && $('.gallery').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows: true,
+        dots: false,
     });
     $('.gallery').slickLightbox({
         itemSelector: 'a'

@@ -878,8 +878,9 @@ body.has-sidebar .content-area {
             max-height: 35vh;            
         }        
         @media(min-width: 960px) {
-            max-width: 50vw;
-            max-height: 34vw;            
+            //max-width: 50vw;
+            max-height: inherit;
+            max-width: 100%;
         }
     }
     .item-gallery {
@@ -1277,8 +1278,40 @@ body.wpex-responsive .post-pagination-wrap {
         max-width: 200px;
     }
 }
+.slick-lightbox {
+    button.slick-next {
+        width: 55px;
+        height: 55px;
+        right: 25px;
+        &:before {
+            color: $theme-color;
+            font-size: 50px;
+            opacity: 1;
+        }
+    }
+    button.slick-prev {
+        left: 25px;
+        width: 55px;
+        height: 55px;
+        &:before {
+            color: $theme-color;
+            font-size: 50px;
+            opacity: 1;
+        }
+    }
 
-
+    button.slick-lightbox-close {
+        right: 13px;
+        width: 55px;
+        height: 55px;
+        top: 3px;
+        &:before {
+            color: $theme-color;
+            font-size: 50px;
+            opacity: 1;
+        }
+    }
+}
 @import 'slick';
 @import 'slick-theme';
 @import 'slick-lightbox';

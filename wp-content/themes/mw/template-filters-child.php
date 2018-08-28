@@ -60,9 +60,7 @@
                 <div class="content-header">
                     <div class="highlighted-header highlighted-center">
                         <h2 class="title">Gallery</h2>
-                        <?php if( get_field('subtitle_highlighted') ) { ?>
-                            <h3 class="subtitle">gallery</h3>
-                        <?php } ?>
+                        <h3 class="subtitle">gallery</h3>
                     </div>
                 </div>
             </div>
