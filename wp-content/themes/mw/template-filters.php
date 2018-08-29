@@ -46,10 +46,27 @@
             <div class="col-12 col-lg-5 title-linee">
                 <div class="content-header">
                     <div class="highlighted-header highlighted-center">
+                    <?php if ( ICL_LANGUAGE_CODE == 'en' ) { ?>
+                        <h2 class="title">Our lines</h2>
+                        <?php if( get_field('subtitle_highlighted') ) { ?>
+                            <h3 class="subtitle">lines</h3>
+                        <?php } ?>
+                    <?php } else if ( ICL_LANGUAGE_CODE == 'de' ) { ?>
+                        <h2 class="title">Unsere linien</h2>
+                        <?php if( get_field('subtitle_highlighted') ) { ?>
+                            <h3 class="subtitle">linien</h3>
+                        <?php } ?>
+                    <?php } else if ( ICL_LANGUAGE_CODE == 'fr' ) { ?>
+                        <h2 class="title">Nos lignes</h2>
+                        <?php if( get_field('subtitle_highlighted') ) { ?>
+                            <h3 class="subtitle">lignes</h3>
+                        <?php } ?>
+                    <?php } else { ?>
                         <h2 class="title">Le nostre linee</h2>
                         <?php if( get_field('subtitle_highlighted') ) { ?>
                             <h3 class="subtitle">linee</h3>
                         <?php } ?>
+                    <?php }  ?>
                     </div>
                 </div>
             </div>
@@ -79,14 +96,17 @@
 
     <div class="call-to-contatto d-flex justify-content-center align-items-center">
         <div class="col-12 col-lg-10">
-            <h2>Sei interessato a uno dei nostri filtri?</h2>
             <?php if ( ICL_LANGUAGE_CODE == 'en' ) { ?>
-                <a href="/contatti/" class="btn btn-white" title="CONTACT">CONTACT</a>
+                <h2>Are you interested in one of our filters?</h2>
+                <a href="/contatti/" class="btn btn-white" title="CONTACT US">CONTACT US</a>
             <?php } else if ( ICL_LANGUAGE_CODE == 'de' ) { ?>
+                <h2>Sind Sie an einem unserer Filter interessiert?</h2>
                 <a href="/contatti/" class="btn btn-white" title="KONTAKT">KONTAKT</a>
             <?php } else if ( ICL_LANGUAGE_CODE == 'fr' ) { ?>
+                <h2>Sei interessato a uno dei nostri filtri?</h2>
                 <a href="/contatti/" class="btn btn-white" title="CONTACT">CONTACT</a>
             <?php } else { ?>
+                <h2>Sei interessato a uno dei nostri filtri?</h2>
                 <a href="/contatti/" class="btn btn-white" title="CONTATTACI">CONTATTACI</a>
             <?php }  ?>    
         </div>

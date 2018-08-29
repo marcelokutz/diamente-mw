@@ -89,14 +89,17 @@
 
     <div class="call-to-contatto d-flex justify-content-center align-items-center">
         <div class="col-12 col-lg-10">
-            <h2>Sei interessato a una delle nostre strutture?</h2>
             <?php if ( ICL_LANGUAGE_CODE == 'en' ) { ?>
-                <a href="/contatti/" class="btn btn-white" title="CONTACT">CONTACT</a>
+                <h2>Are you interested in one of our filters?</h2>
+                <a href="/contatti/" class="btn btn-white" title="CONTACT US">CONTACT US</a>
             <?php } else if ( ICL_LANGUAGE_CODE == 'de' ) { ?>
+                <h2>Sind Sie an einem unserer Filter interessiert?</h2>
                 <a href="/contatti/" class="btn btn-white" title="KONTAKT">KONTAKT</a>
             <?php } else if ( ICL_LANGUAGE_CODE == 'fr' ) { ?>
+                <h2>Sei interessato a uno dei nostri filtri?</h2>
                 <a href="/contatti/" class="btn btn-white" title="CONTACT">CONTACT</a>
             <?php } else { ?>
+                <h2>Sei interessato a uno dei nostri filtri?</h2>
                 <a href="/contatti/" class="btn btn-white" title="CONTATTACI">CONTATTACI</a>
             <?php }  ?>    
         </div>

@@ -9,3 +9,9 @@ Version: 1.1
 */
 
 /* Parent stylesheet should be loaded from functions.php not using @import */
+
+/*Metal kunst3 e opere*/
+.page-template-template-metalkunst-opera .section-gallery {
+	display: none;
+}
+.page-template-template-azienda .box-qualita figure { text-align: center; }

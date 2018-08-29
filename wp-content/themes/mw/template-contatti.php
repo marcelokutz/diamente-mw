@@ -27,6 +27,11 @@
             } ?>     
         </div>        
     </div>
+    <div class="row ml-0 mr-0 align-items-center">
+        <div class="col-12 col-lg-12 pt-5">
+            <img src="http://metalworking.diamente.it/wp-content/uploads/2018/08/metalworking-contatti-mappa.jpg" alt="Metal Working nel mondo">
+        </div>      
+    </div>
 <?php endwhile; ?>
 <script>
 function initMap() {

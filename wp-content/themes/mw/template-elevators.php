@@ -44,14 +44,17 @@
 
     <div class="call-to-contatto bg-fixed d-flex justify-content-center align-items-center">
         <div class="col-12 col-lg-10">
-            <h2>Sei interessato a uno dei nostri prodotti?</h2>
             <?php if ( ICL_LANGUAGE_CODE == 'en' ) { ?>
+                <h2>Are you interested in one of our structures?</h2>
                 <a href="/contatti/" class="btn btn-white" title="CONTACT">CONTACT</a>
             <?php } else if ( ICL_LANGUAGE_CODE == 'de' ) { ?>
+                <h2>Interessieren Sie sich für eine unserer Strukturen?</h2>
                 <a href="/contatti/" class="btn btn-white" title="KONTAKT">KONTAKT</a>
             <?php } else if ( ICL_LANGUAGE_CODE == 'fr' ) { ?>
+                <h2>Sei interessato a una delle nostre strutture?</h2>
                 <a href="/contatti/" class="btn btn-white" title="CONTACT">CONTACT</a>
             <?php } else { ?>
+                <h2>Sei interessato a una delle nostre strutture?</h2>
                 <a href="/contatti/" class="btn btn-white" title="CONTATTACI">CONTATTACI</a>
             <?php }  ?>    
         </div>
